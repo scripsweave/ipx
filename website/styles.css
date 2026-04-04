@@ -649,14 +649,14 @@ nav a.btn-primary:hover {
 }
 
 .event-hero .hero-bg {
-    opacity: 0.4;
+    opacity: 0.8;
 }
 
 .event-hero::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom, rgba(0, 34, 68, 0.85), rgba(0, 34, 68, 0.95));
+    background: linear-gradient(to bottom, rgba(0, 34, 68, 0.45), rgba(0, 34, 68, 0.7));
     z-index: 1;
 }
 
