@@ -141,6 +141,8 @@ nav ul {
     display: flex;
     align-items: center;
     gap: 8px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 nav a {
@@ -1082,7 +1084,7 @@ footer {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 968px) {
     .nav-toggle {
         display: block;
         z-index: 1001;
@@ -1102,6 +1104,8 @@ footer {
         padding: 24px;
         transition: right var(--transition);
         box-shadow: -10px 0 30px rgba(0,0,0,0.3);
+        flex-wrap: nowrap;
+        overflow-y: auto;
     }
 
     nav ul.open {
