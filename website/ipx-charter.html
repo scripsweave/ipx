@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charter | IPX</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <div class="container">
+        <a href="index.html" class="logo">
+            <img src="images/IPX_small.png" alt="IPX Logo">
+        </a>
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="next-event.html">Next Event</a></li>
+                <li><a href="past-events.html">Past Events</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="mailto:info@ipx.ngo?subject=IPX%20Enquiry" class="btn-primary">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" onclick="document.getElementById('nav-menu').classList.toggle('open')" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </div>
+</header>
+
+<!-- Page Header -->
+<div class="page-header">
+    <h1>IPX Charter</h1>
+    <p>Our governance, membership guidelines and shared expectations.</p>
+</div>
+
+<!-- Charter Content -->
+<section class="section">
+    <div class="container">
+        <div class="charter-content">
+
+            <div class="charter-section reveal">
+                <h2>Purpose</h2>
+                <p>The purpose of IPX is to give executives with international payroll responsibility a small, but trusted, community of peers to share with, and learn from. The focus is on quality of connections and interactions, rather than quantity.</p>
+            </div>
+
+            <div class="charter-section reveal">
+                <h2>Scope</h2>
+                <p>The scope of IPX is best practice sharing, case study discussions, co-innovation and analysis of current and future trends in the payroll space.</p>
+            </div>
+
+            <div class="charter-section reveal">
+                <h2>Objectives</h2>
+                <ul>
+                    <li>Two in-person events per year where the community can interact face to face. The emphasis will be on creating an informal atmosphere where information flows most freely. The format includes informal discussion, prepared presentations by members, sessions by invited guests, and social events like meals.</li>
+                    <li>Additional high quality virtual events throughout the year.</li>
+                    <li>A distribution list that can be used for communications at any time. The main aim of this channel is a place where members may pose questions and assist each other.</li>
+                </ul>
+            </div>
+
+            <div class="charter-section reveal">
+                <h2>Membership</h2>
+                <p>The members are executive level decision makers with some responsibility for international payroll. These members come from the HR, Finance, IT, Shared Services, GBS or similar departments of their respective organisations.</p>
+                <p>There are six initial members. Additional members may be invited to join, if approved by the current members. The intention is to limit membership to 10 executives, but if the membership limit is reached, the community will decide on the way forward.</p>
+            </div>
+
+            <div class="charter-section reveal">
+                <h2>Expectations from Members</h2>
+                <p>Members are expected to:</p>
+                <ul>
+                    <li>Be kind, respectful, curious, and helpful.</li>
+                    <li>Be active participants in at least one in-person and one virtual event, and active on the email list. If a member is no longer able to be active they should resign their membership.</li>
+                    <li>Keep potentially business sensitive information shared by other members confidential.</li>
+                    <li>Share in the leadership responsibilities of the community.</li>
+                    <li>Be fluent in English.</li>
+                </ul>
+            </div>
+
+            <div class="charter-section reveal">
+                <h2>Roles</h2>
+                <p>The community will be small and informal, with little formal leadership. There will, however, be roles that rotate between members from time to time:</p>
+                <ul>
+                    <li><strong>Steward:</strong> Get input from members, set the agenda for the next event, and take leadership in the event organisation.</li>
+                    <li><strong>Facilitator(s):</strong> Assist with coordination and communication.</li>
+                </ul>
+            </div>
+
+            <div class="charter-section reveal">
+                <h2>Fees</h2>
+                <p>IPX is not for profit. An annual membership fee will be agreed by the members to cover the cost for events and help ensure continuous active participation.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo"><img src="images/IPX_small.png" alt="IPX"></div>
+                <p>A community of experts sharing insights and best practices in international payroll.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="next-event.html">Next Event</a></li>
+                    <li><a href="past-events.html">Past Events</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="mailto:info@ipx.ngo?subject=IPX%20Enquiry">info@ipx.ngo</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 IPX - International Payroll Executives</p>
+            <p><a href="index.html">View classic site</a></p>
+        </div>
+    </div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+window.addEventListener('scroll', () => {
+    document.querySelector('header').classList.toggle('scrolled', window.scrollY > 50);
+});
+</script>
+
+</body>
+</html>

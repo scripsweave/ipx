@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Event - 7 May 2026 | IPX</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <div class="container">
+        <a href="index.html" class="logo">
+            <img src="images/IPX_small.png" alt="IPX Logo">
+        </a>
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="past-events.html">Past Events</a></li>
+                <li><a href="ipx-charter.html">Charter</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="mailto:info@ipx.ngo?subject=IPX%20Enquiry" class="btn-primary">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" onclick="document.getElementById('nav-menu').classList.toggle('open')" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </div>
+</header>
+
+<!-- Event Hero -->
+<section class="event-hero">
+    <div class="hero-bg" style="background-image: url('images/paddington.jpg');"></div>
+    <div class="event-hero-content">
+        <div class="event-date-badge">&#x1F4C5; 7 May 2026</div>
+        <h1>IPX Event - May 2026</h1>
+        <p class="event-theme">Details coming soon</p>
+    </div>
+</section>
+
+<!-- Event Details -->
+<section class="section">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-label">Event Details</span>
+            <h2>May 2026 Gathering</h2>
+        </div>
+
+        <div class="event-details-grid reveal">
+            <div class="detail-card">
+                <div class="detail-icon">&#x1F4C5;</div>
+                <div>
+                    <h4>Date</h4>
+                    <p>7 May 2026</p>
+                </div>
+            </div>
+            <div class="detail-card">
+                <div class="detail-icon">&#x1F4CD;</div>
+                <div>
+                    <h4>Venue</h4>
+                    <p>To be announced</p>
+                </div>
+            </div>
+            <div class="detail-card">
+                <div class="detail-icon">&#x23F0;</div>
+                <div>
+                    <h4>Time</h4>
+                    <p>To be announced</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Coming Soon -->
+        <div class="coming-soon-banner reveal">
+            <h3>Agenda Coming Soon</h3>
+            <p>We are finalising the programme for our May 2026 event. Check back soon for the full agenda, speakers and venue details.</p>
+        </div>
+
+        <div style="margin-top: 48px; text-align: center;" class="reveal">
+            <a href="past-events.html" class="btn btn-navy">Browse Past Events &rarr;</a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo"><img src="images/IPX_small.png" alt="IPX"></div>
+                <p>A community of experts sharing insights and best practices in international payroll.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="past-events.html">Past Events</a></li>
+                    <li><a href="ipx-charter.html">Charter</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="mailto:info@ipx.ngo?subject=IPX%20Enquiry">info@ipx.ngo</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 IPX - International Payroll Executives</p>
+            <p><a href="index.html">View classic site</a></p>
+        </div>
+    </div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+window.addEventListener('scroll', () => {
+    document.querySelector('header').classList.toggle('scrolled', window.scrollY > 50);
+});
+</script>
+
+</body>
+</html>
