@@ -820,6 +820,58 @@ nav a.btn-primary:hover {
     font-size: 0.875rem;
 }
 
+/* ===== City Mosaic ===== */
+.city-mosaic {
+    overflow: hidden;
+}
+
+.mosaic-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0;
+    height: 160px;
+}
+
+.mosaic-item {
+    overflow: hidden;
+    position: relative;
+}
+
+.mosaic-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(30%);
+    transition: all 0.5s ease;
+}
+
+.mosaic-item:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .mosaic-grid {
+        grid-template-columns: repeat(4, 1fr);
+        height: 120px;
+    }
+
+    .mosaic-item:nth-child(n+5) {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .mosaic-grid {
+        grid-template-columns: repeat(3, 1fr);
+        height: 100px;
+    }
+
+    .mosaic-item:nth-child(n+4) {
+        display: none;
+    }
+}
+
 /* ===== Past Events ===== */
 .events-timeline {
     position: relative;
