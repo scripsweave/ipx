@@ -401,6 +401,65 @@ nav a.btn-primary:hover {
     line-height: 1.7;
 }
 
+/* ===== Floating Logos ===== */
+.section-with-logos {
+    position: relative;
+    overflow: hidden;
+}
+
+.floating-logos {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.floating-logos-left {
+    left: 20px;
+}
+
+.floating-logos-right {
+    right: 20px;
+}
+
+.floating-logos img {
+    width: 60px;
+    max-height: 35px;
+    object-fit: contain;
+    opacity: 0.07;
+    filter: brightness(0) saturate(100%) invert(30%) sepia(50%) saturate(500%) hue-rotate(180deg);
+    transition: opacity 0.5s ease;
+}
+
+.section-with-logos .container {
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 1400px) {
+    .floating-logos {
+        width: 80px;
+    }
+
+    .floating-logos img {
+        width: 45px;
+        max-height: 28px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .floating-logos {
+        display: none;
+    }
+}
+
 /* ===== Feature Cards ===== */
 .features-grid {
     display: grid;
