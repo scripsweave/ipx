@@ -473,16 +473,23 @@ nav a.btn-primary:hover {
     gap: 16px;
 }
 
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 16px;
+}
+
 .member-logo {
     background: var(--white);
     border-radius: var(--radius-sm);
-    padding: 20px 16px;
+    padding: 24px 20px;
     text-align: center;
     border: 1px solid var(--gray-200);
     transition: all var(--transition);
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90px;
 }
 
 .member-logo:hover {
@@ -493,11 +500,30 @@ nav a.btn-primary:hover {
 
 .member-logo a {
     color: var(--navy);
+    font-size: 0.875rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .member-logo a:hover {
     color: var(--navy);
     text-decoration: none;
+}
+
+.member-logo img {
+    max-width: 130px;
+    max-height: 50px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all var(--transition);
+}
+
+.member-logo:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
 }
 
 /* ===== Team Page ===== */
