@@ -682,7 +682,7 @@ nav a.btn-primary:hover {
 /* ===== Event Page Hero ===== */
 .event-hero {
     position: relative;
-    min-height: 50vh;
+    min-height: 65vh;
     display: flex;
     align-items: center;
     justify-content: center;
