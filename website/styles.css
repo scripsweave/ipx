@@ -418,6 +418,10 @@ nav a.btn-primary:hover {
     filter: brightness(0) invert(1);
 }
 
+.hero-logos img.no-invert {
+    filter: none;
+}
+
 @media (max-width: 1200px) {
     .hero-logos img {
         width: 55px;
