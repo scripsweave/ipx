@@ -418,6 +418,10 @@ nav a.btn-primary:hover {
     filter: saturate(0) brightness(5);
 }
 
+.hero-logos img.no-filter {
+    filter: none;
+}
+
 @media (max-width: 1200px) {
     .hero-logos img {
         width: 55px;
