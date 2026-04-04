@@ -401,61 +401,33 @@ nav a.btn-primary:hover {
     line-height: 1.7;
 }
 
-/* ===== Floating Logos ===== */
-.section-with-logos {
-    position: relative;
-    overflow: hidden;
-}
-
-.floating-logos {
+/* ===== Hero Scattered Logos ===== */
+.hero-logos {
     position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 120px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    padding: 40px 0;
-    pointer-events: none;
-    z-index: 0;
-}
-
-.floating-logos-left {
-    left: 20px;
-}
-
-.floating-logos-right {
-    right: 20px;
-}
-
-.floating-logos img {
-    width: 70px;
-    max-height: 40px;
-    object-fit: contain;
-    opacity: 0.12;
-    filter: brightness(0) saturate(100%) invert(55%) sepia(30%) saturate(400%) hue-rotate(180deg);
-    transition: opacity 0.5s ease;
-}
-
-.section-with-logos .container {
-    position: relative;
+    inset: 0;
     z-index: 1;
+    pointer-events: none;
 }
 
-@media (max-width: 1400px) {
-    .floating-logos {
-        width: 80px;
-    }
+.hero-logos img {
+    position: absolute;
+    width: 70px;
+    max-height: 36px;
+    object-fit: contain;
+    opacity: 0.15;
+    filter: brightness(100) saturate(0%);
+}
 
-    .floating-logos img {
-        width: 45px;
+@media (max-width: 1200px) {
+    .hero-logos img {
+        width: 55px;
         max-height: 28px;
+        opacity: 0.12;
     }
 }
 
-@media (max-width: 1100px) {
-    .floating-logos {
+@media (max-width: 768px) {
+    .hero-logos {
         display: none;
     }
 }
