@@ -414,8 +414,8 @@ nav a.btn-primary:hover {
     width: 70px;
     max-height: 36px;
     object-fit: contain;
-    opacity: 0.25;
-    filter: saturate(0) brightness(5);
+    opacity: 0.3;
+    filter: saturate(0) brightness(10);
 }
 
 .hero-logos img.no-filter {
