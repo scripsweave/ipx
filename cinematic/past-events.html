@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Past Events | IPX</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../website/favicon.png">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <a href="index.html" class="logo"><img src="../website/images/IPX_small.png" alt="IPX Logo"></a>
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="next-event.html">Next Event</a></li>
+                <li><a href="ipx-charter.html">Charter</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="mailto:info@ipx.ngo?subject=IPX%20Enquiry" class="btn-primary">Contact</a></li>
+                <li><button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></li>
+            </ul>
+            <button class="nav-toggle" onclick="document.getElementById('nav-menu').classList.toggle('open')" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </div>
+</header>
+
+<!-- Page Hero -->
+<section class="page-hero">
+    <div class="hero-bg-video" style="background-image: url('../website/images/cities/paris-eiffel.jpg');"></div>
+    <div class="page-hero-content">
+        <div class="hero-overline">Our History</div>
+        <h1>Past Events</h1>
+        <p class="hero-tagline">A look back at what our members have explored together.</p>
+    </div>
+</section>
+
+<!-- City Mosaic -->
+<section class="city-mosaic-cinematic">
+    <div class="mosaic-grid-cinematic">
+        <div class="mosaic-item-cinematic"><img src="../website/images/cities/london-skyline.jpg" alt="London skyline"></div>
+        <div class="mosaic-item-cinematic"><img src="../website/images/cities/paris-eiffel.jpg" alt="Paris"></div>
+        <div class="mosaic-item-cinematic"><img src="../website/images/cities/tower-bridge.jpg" alt="Tower Bridge"></div>
+        <div class="mosaic-item-cinematic"><img src="../website/images/cities/ingelheim.jpg" alt="Germany"></div>
+        <div class="mosaic-item-cinematic"><img src="../website/images/cities/st-pauls.jpg" alt="Westminster"></div>
+        <div class="mosaic-item-cinematic"><img src="../website/images/cities/paris-seine.jpg" alt="Paris Seine"></div>
+        <div class="mosaic-item-cinematic"><img src="../website/images/cities/buckingham.jpg" alt="London"></div>
+    </div>
+</section>
+
+<!-- Timeline -->
+<section class="section-cinematic-padded">
+    <div class="section-header-cinematic centered reveal">
+        <div class="overline">Event Timeline</div>
+        <h2>Eight Gatherings and Counting</h2>
+    </div>
+
+    <div class="events-timeline-cinematic">
+
+        <!-- Nov 2025 -->
+        <div class="timeline-item-cinematic reveal">
+            <div class="timeline-card-cinematic">
+                <div class="timeline-date-cinematic">6 November 2025</div>
+                <h3>London, United Kingdom</h3>
+                <p class="venue">Takeda Offices, 1 Kingdom Street, London W2 6BD</p>
+                <span class="theme">The Payroll Lifecycle</span>
+                <p class="event-desc">Sessions covered life before payroll transformation, designing global payroll strategy from scratch, adapting payroll to the future, AI deployment in the enterprise, US payroll deployment challenges, and tail country strategies.</p>
+                <a href="events/nov2025.html" class="event-link">View full agenda &rarr;</a>
+            </div>
+        </div>
+
+        <!-- Apr 2025 -->
+        <div class="timeline-item-cinematic reveal">
+            <div class="timeline-card-cinematic">
+                <div class="timeline-date-cinematic">1 April 2025</div>
+                <h3>London, United Kingdom</h3>
+                <p class="venue">KPMG Offices, 15 Canada Square, London E14 5GL</p>
+                <span class="theme">Data - The Lifeblood of Payroll</span>
+                <p class="event-desc">Featured AI agents at LSEG, global payroll data models, KPMG case study on employee data and cyber security, and Workday's perspective on leveraging data for global payroll strategy.</p>
+                <a href="events/apr2025.html" class="event-link">View full agenda &rarr;</a>
+            </div>
+        </div>
+
+        <!-- Oct 2024 -->
+        <div class="timeline-item-cinematic reveal">
+            <div class="timeline-card-cinematic">
+                <div class="timeline-date-cinematic">21 October 2024</div>
+                <h3>Paris, France</h3>
+                <p class="venue">SLB Offices, 42 Rue Saint-Dominique, 75007 Paris</p>
+                <span class="theme">Talent: You, Your People, AI and Vendors</span>
+                <p class="event-desc">Panel on career management and GBS performance, building an AI-ready payroll team, practical AI for busy executives, Dragon's Den innovation pitches, and a boat dinner on the Seine.</p>
+                <a href="events/oct2024.html" class="event-link">View full agenda &rarr;</a>
+            </div>
+        </div>
+
+        <!-- Apr 2024 -->
+        <div class="timeline-item-cinematic reveal">
+            <div class="timeline-card-cinematic">
+                <div class="timeline-date-cinematic">16 April 2024</div>
+                <h3>London, United Kingdom</h3>
+                <p class="venue">LSEG Offices, London</p>
+            </div>
+        </div>
+
+        <!-- Oct 2023 -->
+        <div class="timeline-item-cinematic reveal">
+            <div class="timeline-card-cinematic">
+                <div class="timeline-date-cinematic">24 October 2023</div>
+                <h3>Ingelheim, Germany</h3>
+                <p class="venue">Boehringer Ingelheim Offices, Ingelheim am Rhein</p>
+            </div>
+        </div>
+
+        <!-- Mar 2023 -->
+        <div class="timeline-item-cinematic reveal">
+            <div class="timeline-card-cinematic">
+                <div class="timeline-date-cinematic">7 March 2023</div>
+                <h3>London, United Kingdom</h3>
+                <p class="venue">Diageo Offices, London</p>
+            </div>
+        </div>
+
+        <!-- Sep 2022 -->
+        <div class="timeline-item-cinematic reveal">
+            <div class="timeline-card-cinematic">
+                <div class="timeline-date-cinematic">13 September 2022</div>
+                <h3>London, United Kingdom</h3>
+                <p class="venue">Ricoh Offices, London</p>
+            </div>
+        </div>
+
+        <!-- Mar 2022 -->
+        <div class="timeline-item-cinematic reveal">
+            <div class="timeline-card-cinematic">
+                <div class="timeline-date-cinematic">17 March 2022</div>
+                <h3>London, United Kingdom</h3>
+                <p class="venue">Sage Offices, London</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-cinematic">
+    <div class="container">
+        <h2>Next Gathering: 7 May 2026</h2>
+        <p>London, hosted by ADM at The Minster Building</p>
+        <div class="hero-actions">
+            <a href="next-event.html" class="btn btn-gold">View Event Details &rarr;</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-brand">
+            <div class="logo"><img src="../website/images/IPX_small.png" alt="IPX"></div>
+            <p>An invitation-only community of senior global payroll executives.</p>
+        </div>
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="next-event.html">Next Event</a></li>
+                <li><a href="ipx-charter.html">Charter</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-links">
+            <h4>Contact</h4>
+            <ul>
+                <li><a href="mailto:info@ipx.ngo?subject=IPX%20Enquiry">info@ipx.ngo</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 IPX - International Payroll Executives</p>
+    </div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+window.addEventListener('scroll', () => {
+    document.querySelector('header').classList.toggle('scrolled', window.scrollY > 50);
+});
+
+function toggleTheme() {
+    var h = window.location.href;
+    localStorage.setItem('ipx-theme', 'light');
+    var i = h.lastIndexOf('/cinematic/');
+    if (i !== -1) {
+        window.location.href = h.substring(0, i) + '/website/' + h.substring(i + '/cinematic/'.length);
+    }
+}
+</script>
+
+</body>
+</html>
