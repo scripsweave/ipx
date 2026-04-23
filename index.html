@@ -1,28 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+    // Honour previously chosen light theme
+    if (localStorage.getItem('ipx-theme') === 'light') {
+        window.location.replace('/website/');
+    }
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IPX - International Payroll Executives</title>
-    <link rel="icon" type="image/png" href="website/favicon.png">
-    <link rel="canonical" href="cinematic/index.html">
-    <meta http-equiv="refresh" content="0; url=cinematic/index.html">
-    <script>
-    (function() {
-        var theme = localStorage.getItem('ipx-theme');
-        if (theme === 'light') {
-            window.location.replace('website/index.html');
-        } else {
-            window.location.replace('cinematic/index.html');
-        }
-    })();
-    </script>
-    <style>
-        body { margin: 0; background: #0a0a0a; display: flex; align-items: center; justify-content: center; height: 100vh; font-family: sans-serif; color: #ccc; }
-        a { color: #fff; }
-    </style>
+    <base href="/cinematic/">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../website/favicon.png">
 </head>
 <body>
-    <p>Redirecting to <a href="cinematic/index.html">IPX</a>&hellip;</p>
+
+<header>
+    <div class="container">
+        <a href="/" class="logo"><img src="../website/images/IPX_small.png" alt="IPX Logo"></a>
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="next-event.html">Next Event</a></li>
+                <li><a href="past-events.html">Past Events</a></li>
+                <li><a href="ipx-charter.html">Charter</a></li>
+                <li><a href="about-us.html">Our Members</a></li>
+                <li><a href="mailto:info@ipx.ngo?subject=IPX%20Enquiry" class="btn-primary">Contact</a></li>
+                <li><button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></li>
+            </ul>
+            <button class="nav-toggle" onclick="document.getElementById('nav-menu').classList.toggle('open')" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </div>
+</header>
+
+<!-- HERO: Cinematic full-viewport -->
+<section class="hero-cinematic">
+    <div class="hero-bg-video" style="background-image: url('../website/images/cities/tower-bridge.jpg');"></div>
+    <div class="hero-title-block">
+        <div class="hero-overline">International Payroll Executives</div>
+        <h1 class="hero-massive-title">
+            Global<br>
+            <span class="gold-stroke">Payroll</span><br>
+            Leaders
+        </h1>
+        <p class="hero-tagline">An invitation-only circle of senior executives shaping the future of international payroll.</p>
+    </div>
+    <div class="scroll-indicator">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+    </div>
+</section>
+
+<!-- Stats -->
+<div class="stat-panels">
+    <div class="stat-panel"><h3>14</h3><p>Members</p></div>
+    <div class="stat-panel"><h3>14</h3><p>Companies</p></div>
+    <div class="stat-panel"><h3>8</h3><p>Events Held</p></div>
+    <div class="stat-panel"><h3>75+</h3><p>Countries</p></div>
+</div>
+
+<!-- Who We Are -->
+<section class="section-cinematic section-dark">
+    <div class="container">
+        <p class="big-text-reveal reveal">
+            We are a <span class="accent">deliberately small circle</span> of executives with international payroll responsibility &mdash; a trusted space to share, learn, and shape what comes next.
+        </p>
+    </div>
+    <div class="side-label">Who We Are</div>
+</section>
+
+<!-- Features -->
+<section class="section-cinematic section-light" style="min-height: auto; padding: 0;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+        <div class="features-columns">
+            <div class="feature-column reveal">
+                <div class="feature-number">01</div>
+                <h3>Best Practice Sharing</h3>
+                <p>Candid, off-the-record discussions and case studies from real-world global payroll operations across industries.</p>
+            </div>
+            <div class="feature-column reveal reveal-delay-1">
+                <div class="feature-number">02</div>
+                <h3>In-Person Events</h3>
+                <p>Two curated events per year with presentations, panels, guest speakers and social dinners.</p>
+            </div>
+            <div class="feature-column reveal reveal-delay-2">
+                <div class="feature-number">03</div>
+                <h3>Joint Innovation</h3>
+                <p>Collaborative exploration of AI, automation and emerging trends shaping the future of payroll.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Members -->
+<section class="section-cinematic section-dark" style="min-height: auto; padding: 80px 0;">
+    <div class="section-header-cinematic centered reveal">
+        <div class="overline">Membership</div>
+        <h2>Executive-Level Decision Makers</h2>
+        <p>Membership is by invitation only and limited by design. Our members represent some of the world's leading organisations.</p>
+    </div>
+    <div class="members-grid-cinematic reveal">
+        <div class="member-logo-cinematic"><a href="https://www.adm.com" target="_blank"><img src="../website/images/logos/adm.png" alt="ADM"></a></div>
+        <div class="member-logo-cinematic"><a href="https://www.boehringer-ingelheim.com" target="_blank"><img src="../website/images/logos/boehringer.png" alt="Boehringer Ingelheim"></a></div>
+        <div class="member-logo-cinematic"><a href="https://www.diageo.com" target="_blank"><img src="../website/images/logos/diageo.png" alt="Diageo"></a></div>
+        <div class="member-logo-cinematic"><a href="https://www.epiuse.com" target="_blank"><img src="../website/images/logos/epiuse.png" alt="EPI-USE"></a></div>
+        <div class="member-logo-cinematic"><a href="https://www.florafoodgroup.com" target="_blank"><img src="../website/images/logos/florafood.png" alt="Flora Food Group"></a></div>
+        <div class="member-logo-cinematic"><a href="https://www.kier.co.uk" target="_blank"><img src="../website/images/logos/kier.png" alt="Kier Group"></a></div>
+        <div class="member-logo-cinematic"><a href="https://home.kpmg" target="_blank"><img src="../website/images/logos/kpmg.png" alt="KPMG"></a></div>
+        <div class="member-logo-cinematic"><a href="https://www.lseg.com" target="_blank"><img src="../website/images/logos/lseg.png" alt="LSEG"></a></div>
+        <div class="member-logo-cinematic"><a href="https://www.meta.com" target="_blank"><img src="../website/images/logos/meta.png" alt="Meta"></a></div>
+        <div class="member-logo-cinematic"><a href="https://www.ricoh.com" target="_blank"><img src="../website/images/logos/ricoh.png" alt="Ricoh"></a></div>
+        <div class="member-logo-cinematic"><a href="https://www.slb.com" target="_blank"><img src="../website/images/logos/slb.png" alt="SLB"></a></div>
+        <div class="member-logo-cinematic"><a href="https://www.syensqo.com" target="_blank"><img src="../website/images/logos/syensqo.svg" alt="Syensqo"></a></div>
+        <div class="member-logo-cinematic"><a href="https://www.takeda.com" target="_blank"><img src="../website/images/logos/takeda.png" alt="Takeda"></a></div>
+        <div class="member-logo-cinematic"><a href="https://www.upfield.com" target="_blank"><img src="../website/images/logos/upfield.png" alt="Upfield"></a></div>
+    </div>
+</section>
+
+<!-- Logo Marquee -->
+<section class="logo-marquee">
+    <div class="marquee-track">
+        <img src="../website/images/logos/adm.png" alt="ADM">
+        <img src="../website/images/logos/boehringer.png" alt="Boehringer">
+        <img src="../website/images/logos/diageo.png" alt="Diageo">
+        <img src="../website/images/logos/epiuse.png" alt="EPI-USE">
+        <img src="../website/images/logos/florafood.png" alt="Flora Food">
+        <img src="../website/images/logos/kier.png" alt="Kier">
+        <img src="../website/images/logos/kpmg.png" alt="KPMG">
+        <img src="../website/images/logos/lseg.png" alt="LSEG">
+        <img src="../website/images/logos/meta.png" alt="Meta">
+        <img src="../website/images/logos/ricoh.png" alt="Ricoh">
+        <img src="../website/images/logos/slb.png" alt="SLB">
+        <img src="../website/images/logos/syensqo.svg" alt="Syensqo">
+        <img src="../website/images/logos/takeda.png" alt="Takeda">
+        <img src="../website/images/logos/upfield.png" alt="Upfield">
+        <!-- Duplicate for seamless loop -->
+        <img src="../website/images/logos/adm.png" alt="ADM">
+        <img src="../website/images/logos/boehringer.png" alt="Boehringer">
+        <img src="../website/images/logos/diageo.png" alt="Diageo">
+        <img src="../website/images/logos/epiuse.png" alt="EPI-USE">
+        <img src="../website/images/logos/florafood.png" alt="Flora Food">
+        <img src="../website/images/logos/kier.png" alt="Kier">
+        <img src="../website/images/logos/kpmg.png" alt="KPMG">
+        <img src="../website/images/logos/lseg.png" alt="LSEG">
+        <img src="../website/images/logos/meta.png" alt="Meta">
+        <img src="../website/images/logos/ricoh.png" alt="Ricoh">
+        <img src="../website/images/logos/slb.png" alt="SLB">
+        <img src="../website/images/logos/syensqo.svg" alt="Syensqo">
+        <img src="../website/images/logos/takeda.png" alt="Takeda">
+        <img src="../website/images/logos/upfield.png" alt="Upfield">
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-cinematic">
+    <div class="container">
+        <h2>Next Gathering: 7 May 2026</h2>
+        <p>London, hosted by ADM at The Minster Building</p>
+        <div class="hero-actions">
+            <a href="next-event.html" class="btn btn-gold">View Event Details &rarr;</a>
+            <a href="past-events.html" class="btn btn-outline">Browse Past Events</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-brand">
+            <div class="logo"><img src="../website/images/IPX_small.png" alt="IPX"></div>
+            <p>An invitation-only community of senior global payroll executives.</p>
+        </div>
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="next-event.html">Next Event</a></li>
+                <li><a href="past-events.html">Past Events</a></li>
+                <li><a href="ipx-charter.html">Charter</a></li>
+                <li><a href="about-us.html">Our Members</a></li>
+            </ul>
+        </div>
+        <div class="footer-links">
+            <h4>Contact</h4>
+            <ul>
+                <li><a href="mailto:info@ipx.ngo?subject=IPX%20Enquiry">info@ipx.ngo</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 IPX - International Payroll Executives</p>
+    </div>
+</footer>
+
+<script>
+// Parallax on hero background
+window.addEventListener('scroll', () => {
+    const hero = document.querySelector('.hero-bg-video');
+    const scroll = window.scrollY;
+    if (hero && scroll < window.innerHeight) {
+        hero.style.transform = `scale(${1.1 + scroll * 0.0003}) translateY(${scroll * 0.3}px)`;
+    }
+});
+
+// Scroll reveal
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Header scroll effect
+window.addEventListener('scroll', () => {
+    document.querySelector('header').classList.toggle('scrolled', window.scrollY > 50);
+});
+
+function toggleTheme() {
+    localStorage.setItem('ipx-theme', 'light');
+    window.location.href = '/website/';
+}
+</script>
+
 </body>
 </html>
