@@ -5,24 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IPX - International Payroll Executives</title>
     <link rel="icon" type="image/png" href="website/favicon.png">
+    <link rel="canonical" href="cinematic/index.html">
+    <meta http-equiv="refresh" content="0; url=cinematic/index.html">
     <script>
     (function() {
         var theme = localStorage.getItem('ipx-theme');
-        if (!theme) {
-            theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-        }
-        if (theme === 'dark') {
-            window.location.replace('cinematic/index.html');
-        } else {
+        if (theme === 'light') {
             window.location.replace('website/index.html');
+        } else {
+            window.location.replace('cinematic/index.html');
         }
     })();
     </script>
     <style>
-        body { margin: 0; background: #f8f9fa; display: flex; align-items: center; justify-content: center; height: 100vh; font-family: sans-serif; color: #666; }
+        body { margin: 0; background: #0a0a0a; display: flex; align-items: center; justify-content: center; height: 100vh; font-family: sans-serif; color: #ccc; }
+        a { color: #fff; }
     </style>
 </head>
 <body>
-    <p>Redirecting...</p>
+    <p>Redirecting to <a href="cinematic/index.html">IPX</a>&hellip;</p>
 </body>
 </html>
